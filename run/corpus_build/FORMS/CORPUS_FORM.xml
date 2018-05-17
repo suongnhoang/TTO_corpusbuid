@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teiCorpus version="3.3.0" xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader>
+	  	<fileDesc>
+		    <titleStmt>
+		    	<title>TITLE_HERE</title>
+		    </titleStmt>
+		    <publicationStmt>
+		      	<pubPlace>thành phố Hồ Chí Minh</pubPlace>
+		      	<publisher>tuổi trẻ online</publisher>
+		    </publicationStmt>
+	    </fileDesc>
+	    <profileDesc>
+	    	<langUsage default="NO"></langUsage>
+	        <language id="vi">vietnamese</language>
+	    </profileDesc>
+	</teiHeader>
+</teiCorpus>

@@ -1,0 +1,28 @@
+<TEI lang="vi" id="ID_HERE">
+	<teiHeader>
+	  	<fileDesc>
+		    <titleStmt>
+		    	<title>TITLE_HERE</title>
+		    </titleStmt>
+		    <publicationStmt>
+		      	<authority>AUTHOR_HERE</authority>
+		        <date>DATE_HERE</date>
+		    </publicationStmt>
+		    <respStmt>
+  				<persName>AUTHOR_HERE</persName>
+  				<resp>CATEGORY_NEWS</resp>
+ 			</respStmt>
+	    </fileDesc>
+	</teiHeader>
+	<text>
+		<front>PARAGRAPH_HERE</front>
+	    <body>
+		    <div1>
+		        <p>PARAGRAPH_HERE</p>
+		    </div1>
+		    <div2>
+		        <p>PARAGRAPH_HERE</p>
+		    </div2>
+	    </body>
+	</text>
+</TEI>
