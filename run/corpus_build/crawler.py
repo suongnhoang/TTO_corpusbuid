@@ -32,7 +32,9 @@ def TTO_crawler(link, category):
     id_ = link.split("-")[-1].replace(".htm", "")
     
     try:
+        
         tree = parse_html(link)
+        
         fck = tree.find(class_="fck")
         contents = get_leaf_paragraphs(fck.find_all('p', recursive=False))
 
@@ -58,7 +60,7 @@ def TTO_crawler(link, category):
 
         front = tree.find(class_="txt-head").text.replace("\r", " ").replace("\n", " ").rstrip().lstrip()
 
-        resp = category
+        domain = category
         
     except:
         return None
@@ -77,8 +79,7 @@ def TTO_crawler(link, category):
     TEI['TEI']['teiHeader']['fileDesc']['publicationStmt']['authority'] = author
     TEI['TEI']['teiHeader']['fileDesc']['publicationStmt']['date'] = date
 
-    TEI['TEI']['teiHeader']['fileDesc']['respStmt']['persName'] = author
-    TEI['TEI']['teiHeader']['fileDesc']['respStmt']['resp'] = resp
+    TEI['TEI']['teiHeader']['fileDesc']['profileDesc']['textDesc']['domain'][u'@type'] = domain
 
     TEI['TEI']['text']['front'] = front
     TEI['TEI']['text']['body'] = div

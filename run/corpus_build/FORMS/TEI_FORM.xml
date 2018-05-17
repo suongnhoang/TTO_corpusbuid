@@ -8,10 +8,11 @@
 		      	<authority>AUTHOR_HERE</authority>
 		        <date>DATE_HERE</date>
 		    </publicationStmt>
-		    <respStmt>
-  				<persName>AUTHOR_HERE</persName>
-  				<resp>CATEGORY_NEWS</resp>
- 			</respStmt>
+		    <profileDesc>
+				<textDesc>
+				 	<domain type="DOMAIN_HERE"/>
+				</textDesc>
+			</profileDesc>
 	    </fileDesc>
 	</teiHeader>
 	<text>
