@@ -16,3 +16,5 @@
  - Định dạng corpus TEI: http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-teiCorpus.html
  - Định dạng header TEI: http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html
  - Định dạng text TEI: http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html
+
+> **"Sàn diễn được TTO thêm từ ngày 12/5/2018"** 
