@@ -29,6 +29,7 @@ def get_leaf_paragraphs(contents):
 
 def TTO_crawler(link, category):
     
+        
     id_ = link.split("-")[-1].replace(".htm", "")
     
     try:
@@ -41,7 +42,7 @@ def TTO_crawler(link, category):
         div = {}
 
         for i in range(len(contents)):
-            text = contents[i].text.replace("\r", " ").replace("\n", " ").rstrip().lstrip()
+            text = contents[i].text.replace("\r", " ").replace("\n", " ").replace('','').replace('','').replace('','').replace('','').replace('','').replace('','').replace('','').replace('','').replace('','').rstrip().lstrip()
             if(text != ""):
                 paragraph_p = {}
                 paragraph_p[u'p'] = text
@@ -58,7 +59,7 @@ def TTO_crawler(link, category):
 
         author = tree.find(class_="author").text.replace("\r"," ").replace("\n"," ").rstrip().lstrip().lower()
 
-        front = tree.find(class_="txt-head").text.replace("\r", " ").replace("\n", " ").rstrip().lstrip()
+        front = tree.find(class_="txt-head").text.replace("\r", " ").replace("\n", " ").replace('','').replace('','').replace('','').replace('','').replace('','').replace('','').replace('','').replace('','').replace('','').rstrip().lstrip()
 
         domain = category
         
@@ -66,7 +67,7 @@ def TTO_crawler(link, category):
         return None
 
     #open TEI format
-    with codecs.open('../FORMS/TEI_FORM.xml') as fd:
+    with codecs.open('./FORMS/TEI_FORM.xml') as fd:
         TEI_string = fd.read()
 
 
@@ -87,7 +88,6 @@ def TTO_crawler(link, category):
     #return xml
     
     return "\t" + xmltodict.unparse(TEI, encoding='utf-8', pretty=True).replace("\n\t", "\n\t\t").replace("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n",  "").replace("</TEI>", "\t</TEI>") + "\n"
-
 
 
 with codecs.open('../FORMS/categories_dict.json', 'r', encoding='utf-8') as fp:
