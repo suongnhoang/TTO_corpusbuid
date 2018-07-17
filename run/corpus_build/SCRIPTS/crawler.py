@@ -42,7 +42,7 @@ def TTO_crawler(link, category):
         div = {}
 
         for i in range(len(contents)):
-            text = contents[i].text.replace("\r", " ").replace("\n", " ").replace('','').replace('','').replace('','').replace('','').replace('','').replace('','').replace('','').replace('','').replace('','').rstrip().lstrip()
+            text = contents[i].text.replace("\r", " ").replace("\n", " ").rstrip().lstrip()
             if(text != ""):
                 paragraph_p = {}
                 paragraph_p[u'p'] = text
@@ -59,7 +59,7 @@ def TTO_crawler(link, category):
 
         author = tree.find(class_="author").text.replace("\r"," ").replace("\n"," ").rstrip().lstrip().lower()
 
-        front = tree.find(class_="txt-head").text.replace("\r", " ").replace("\n", " ").replace('','').replace('','').replace('','').replace('','').replace('','').replace('','').replace('','').replace('','').replace('','').rstrip().lstrip()
+        front = tree.find(class_="txt-head").text.replace("\r", " ").replace("\n", " ").rstrip().lstrip()
 
         domain = category
         
